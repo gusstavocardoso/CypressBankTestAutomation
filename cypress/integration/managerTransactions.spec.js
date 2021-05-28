@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import HomePage from '../support/pages/Elements/HomePage'
+import HomePageElements from '../support/pages/Elements/HomePageElements'
 import ManagerData from '../support/pages/data/ManagerData'
 import ManagerElements from '../support/pages/Elements/ManagerElements';
 
@@ -13,7 +13,7 @@ describe('Manager XYZ Bank', () => {
     });
 
     it('Devo acessar a home page do banco', () => {
-        let managerBank = new HomePage();
+        let managerBank = new HomePageElements();
         managerBank.onHomePage().should('have.text', 'XYZ Bank');
     });
 

@@ -2,7 +2,7 @@
 
 import CustomerData from '../support/pages/data/customerData';
 import CustomerElements from '../support/pages/Elements/CustomerElements';
-import HomePage from '../support/pages/Elements/HomePage'
+import HomePageElements from '../support/pages/Elements/HomePageElements'
 
 describe('Customer XYZ Bank', () => {
     let customer = new CustomerData('Neville Longbottom', '1000000', '500000');
@@ -20,7 +20,7 @@ describe('Customer XYZ Bank', () => {
     });
 
     it('Devo acessar a home page', () => {
-        let managerBank = new HomePage();
+        let managerBank = new HomePageElements();
         managerBank.onHomePage().should('have.text', 'XYZ Bank');
     });
 
@@ -65,6 +65,6 @@ describe('Customer XYZ Bank', () => {
 
         customerElements
             .verMeusSaques()
-            .should('contain.text', '1000000');
+            .should('contain.text', '500000');
     });
 });

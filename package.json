@@ -1,0 +1,21 @@
+{
+  "name": "cypress-bank-test-automation",
+  "version": "1.0.0",
+  "description": "projeto de automação de testes com cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [
+    "testing",
+    "cypress",
+    "automation"
+  ],
+  "author": "Gustavo Cardoso",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.4.0"
+  }
+}

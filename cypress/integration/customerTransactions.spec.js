@@ -15,8 +15,7 @@ describe('Customer XYZ Bank', () => {
     after(() => {
         cy.logoutCustomer();
 
-        let logout = cy.get('button[ng-click="byebye()"]');
-        logout.should('not.be.visible');
+        customerActions.naoVerLogout().should('not.be.visible');
     });
 
     it('Devo acessar a home page', () => {

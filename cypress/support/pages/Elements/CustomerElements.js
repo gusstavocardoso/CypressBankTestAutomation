@@ -19,6 +19,10 @@ class CustomerElements {
     verMeusSaques(){
         return cy.get('td.ng-binding');
     }
+
+    naoVerLogout(){
+        return cy.get('button[ng-click="byebye()"]');
+    }
 }
 
 export default CustomerElements;

@@ -6,7 +6,7 @@ import ManagerElements from '../support/pages/Elements/ManagerElements';
 
 describe('Manager XYZ Bank', () => {
     let customer = new ManagerData('John','Petrucci','14680-000');
-    let managerElements = new ManagerElements();
+    let managerActions = new ManagerElements();
 
     before(() => {
         cy.visit(`${Cypress.config().relativeUrl}`);
@@ -38,7 +38,7 @@ describe('Manager XYZ Bank', () => {
     it('Devo consultar os meus clientes', () => {
         cy.consultarCliente(customer.nome);
 
-        managerElements
+        managerActions
             .verClientePesquisado()
             .contains('Petrucci')
             .should('contain.text', 'Petrucci');
@@ -47,7 +47,7 @@ describe('Manager XYZ Bank', () => {
     it('Devo remover um cliente', () => {
         cy.removerCliente();
     
-        managerElements
+        managerActions
             .pesquisarClienteRemovido()
             .contains('Petrucci')
             .should('not.exist'); 

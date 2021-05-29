@@ -6,7 +6,7 @@ import HomePageElements from '../support/pages/Elements/HomePageElements'
 
 describe('Customer XYZ Bank', () => {
     let customer = new CustomerData('Neville Longbottom', '1000000', '500000');
-    let customerElements = new CustomerElements();
+    let customerActions = new CustomerElements();
 
     before(() => {
         cy.visit(`${Cypress.config().relativeUrl}`);
@@ -27,14 +27,14 @@ describe('Customer XYZ Bank', () => {
     it('Devo logar na minha conta', () => {
         cy.loginCustomer(customer.nome);
 
-        customerElements
+        customerActions
             .verAreaCliente().should('have.text', 'Neville Longbottom');;
     });
 
     it('Devo fazer um depósito na minha conta', () => {
         cy.depositoCliente(customer.deposito);
 
-        customerElements
+        customerActions
             .verDepositoRealizado()
             .should('have.text', 'Deposit Successful');
 
@@ -46,7 +46,7 @@ describe('Customer XYZ Bank', () => {
 
         cy.saqueCliente(customer.saque);
 
-        customerElements
+        customerActions
             .verSaqueRealizado()
             .should('have.text', 'Transaction successful');
 
@@ -59,11 +59,11 @@ describe('Customer XYZ Bank', () => {
 
         cy.saldoCliente();
 
-        customerElements
+        customerActions
             .verMeusDepositos()
             .should('contain.text', '1000000');
 
-        customerElements
+        customerActions
             .verMeusSaques()
             .should('contain.text', '500000');
     });

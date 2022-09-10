@@ -15,7 +15,7 @@
   ],
   "author": "Gustavo Cardoso",
   "license": "ISC",
-  "devDependencies": {
-    "cypress": "^7.4.0"
+  "dependencies": {
+    "cypress": "^10.7.0"
   }
 }

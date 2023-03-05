@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import CustomerData from '../support/pages/data/customerData';
+import CustomerData from '../support/pages/data/CustomerData';
 import CustomerElements from '../support/pages/Elements/CustomerElements';
 import HomePageElements from '../support/pages/Elements/HomePageElements'
 

@@ -16,6 +16,6 @@
   "author": "Gustavo Cardoso",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^10.7.0"
+    "cypress": "^15.15.0"
   }
 }
